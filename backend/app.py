@@ -8,8 +8,8 @@ from flask import Flask, request, jsonify
 superkart_api = Flask("SuperKart Sales Predictor")
 
 # Load the trained machine learning model
-# We will use our trained model file
-model = joblib.load("superkart_model.joblib")
+# We will use the correct filename matching what we serialized
+model = joblib.load("retail_price_prediction_model_v1_0.joblib")
 
 @superkart_api.get('/')
 def home():
